@@ -16,3 +16,28 @@
     font-weight: 700;
     text-align: center;
 }
+
+@media (max-width:768px){
+    .MissionHeading {
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .MissionSection {
+        height: 100vh;
+    }
+
+    .MissionHeading {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 700;
+        color:white;
+        text-align: center;
+    }
+}

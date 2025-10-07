@@ -10,8 +10,8 @@
 
 /* Logo */
 .logoImg {
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 
 /* Brand */
@@ -58,5 +58,12 @@
   }
   .nav-link {
     margin: 0.5rem 0;
+  }
+
+  .navbar{
+    background-color:white;
+  }
+  .custom-navbar {
+    position: inherit;
   }
 }

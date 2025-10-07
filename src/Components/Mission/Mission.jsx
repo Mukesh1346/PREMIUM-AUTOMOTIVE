@@ -7,22 +7,22 @@ export default function Mission() {
        <div className='MissionSection'>
 
        <div className='w-75 '>
-          <h4 className='MissionHeading  mb-3'>  Who We Are Today</h4>
+          <h4 className='title  mb-3'>  Who We Are Today</h4>
         <h3 className='MissionHeading'>
       
 SSEPL is regarded as a preferred partner for
 OEMs and authorized workshops nationwide,
 offering a portfolio that is exclusively premium in
 both product and service standards. <br /> <br />
-We are defined by:
+We are defined by: <br />
 • OEM Trust  Established relationships with
-leading manufacturers
+leading manufacturers <br />
 • Nationwide Reach  Streamlined supply chain
-and service support across India
+and service support across India  <br />
 • Premium Focus  Commitment to premium
-products, technologies, and services
+products, technologies, and services <br />
 • Excellence & Compliance  Adherence to OEM
-specifications and regulatory standards
+specifications and regulatory standards 
 Our Vision  <br /> <br />
 To remain India s most trusted partner in
 premium automotive care, setting benchmarks in

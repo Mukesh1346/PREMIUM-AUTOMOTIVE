@@ -9,10 +9,32 @@
     background-size: cover;
   
 }
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+}
 
 .AboutHeading{
     color: white;
     font-size: 25px;
     font-weight: 700;
     text-align: center;
+}
+
+@media (max-width:768px){
+    .AboutHeading {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    .title{
+        font-size: 20px;
+        font-weight: 700;
+        color:rgb(219, 52, 52);
+        text-align: center;
+    }
 }

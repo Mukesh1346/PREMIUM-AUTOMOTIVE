@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../Components/StartScreen/Hero/Hero'
+import Hero from '../Components/Hero/Hero'
 
 
 export default function Home() {

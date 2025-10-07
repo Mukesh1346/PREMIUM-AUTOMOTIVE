@@ -1,18 +1,55 @@
-.BrandsSection{
+/* Your existing CSS stays untouched */
+.BrandsSection {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../../Assets//Images/background2.jpg");
+    background-image: url("../../Assets/Images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
   
-}
-
-.BrandsHeading{
+  .BrandsHeading {
     color: white;
     font-size: 25px;
     font-weight: 700;
     text-align: center;
-}
+  }
+  
+  /* 👇 Add this new part only */
+  .BrandsImagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .BrandCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    transition: transform 0.3s ease;
+  }
+  
+  .BrandCard:hover {
+    transform: scale(1.1);
+  }
+  
+  .BrandImage {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .BrandName {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+  }
+  

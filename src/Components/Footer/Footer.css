@@ -4,6 +4,7 @@
     color: #fff;
     padding: 60px 0 30px 0;
     font-family: Arial, sans-serif;
+    border-top: 8px solid rgb(177, 20, 20)
   }
   
   .footer a {
@@ -107,8 +108,14 @@
   @media (max-width: 768px) {
     .footer-row {
       flex-direction: column;
+
     }
-  
+   .footer{
+    text-align: center;
+    font-size: 12px;
+    padding: 18px 0 15px 0;
+    border-top: 1px dashed red;
+   }
     .newsletter-form {
       flex-direction: column;
     }
@@ -119,5 +126,9 @@
       margin: 5px 0;
       border-radius: 3px;
     }
+    .footer-col{
+        margin:0px;
+    }
+
   }
   

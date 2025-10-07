@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Mission from './Components/Mission/Mission';
 import BrandsUs from './Components/Brands/Brands';
+import ContactUs from './Components/ContactUs/ContactUs';
 
 function App() {
   const [showStart, setShowStart] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/brands" element={<BrandsUs />} />
+        <Route path="/contactus" element={<ContactUs />} />
         {/* Add more routes here later if needed */}
       </Routes>
       <Footer/>
