@@ -27,8 +27,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .footerSec1{
+    text-align: left !important;
+
+  }
   
   .footer-col {
+    text-align: center;
     flex: 1;
     min-width: 250px;
     margin-bottom: 30px;

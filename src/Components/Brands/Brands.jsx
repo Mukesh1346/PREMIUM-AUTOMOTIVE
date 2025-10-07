@@ -43,7 +43,7 @@ export default function BrandsUs() {
                   alt={brand.name}
                   className="BrandImage"
                 />
-                <p className="BrandName">{brand.name}</p>
+                {/* <p className="BrandName">{brand.name}</p> */}
               </div>
             ))}
           </div>

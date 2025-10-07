@@ -29,14 +29,14 @@ export default function ContactUs() {
             <div className="contact-left p-4 h-100 address shadow-sm rounded">
               <h2 className="mb-3">CONTACT US</h2>
               <p>
-                <strong>Office Address:</strong> Sikand Standley Enterprises Private Limited,
+                <strong>Corporate Address:</strong> Sikand Standley Enterprises Private Limited, <br />
                 Plot No.- 33, Pocket - N, DSIIDC, Sector -5, Industrial Area, Bawana, New Delhi - 110039
               </p>
               <p>
                 <strong>Contact Number:</strong> 011-47100197 / 98, 7838960232
               </p>
               <p>
-                <strong>Email ID:</strong> info@sik.com
+                <strong>Email ID:</strong> Info@sikandstandley.com
               </p>
               <div className="social-icons mb-3">
                 <a href="#"><FaFacebookF /></a>

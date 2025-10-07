@@ -10,11 +10,32 @@
   
 }
 
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-align: left;
+}
+.liText{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+}
+
+
 .MissionHeading{
     color: white;
     font-size: 25px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
+}
+
+.subheading{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
 }
 
 @media (max-width:768px){
@@ -38,6 +59,7 @@
         font-size: 30px;
         font-weight: 700;
         color:white;
-        text-align: center;
+        text-align: left;
     }
+    
 }

@@ -35,11 +35,12 @@ export default function Navbar() {
               <Link className="nav-link" to="/aboutus">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/brands">Brands</Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to="/mission">Mission</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/brands">OEM Partnership </Link>
+            </li>
+          
             <li className="nav-item">
               <Link className="nav-link" to="/contactus">Contact Us</Link>
             </li>
