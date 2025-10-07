@@ -1,0 +1,62 @@
+/* Navbar Base */
+.custom-navbar {
+  background: transparent; /* fully transparent */
+  position: absolute;
+  width: 100%; /* full width */
+  padding: 0.8rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+}
+
+/* Logo */
+.logoImg {
+  height: 60px;
+  width: 60px;
+}
+
+/* Brand */
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: white;
+}
+
+/* Navbar Links */
+.custom-navbar .nav-link {
+  color: white !important;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d61b1b !important;
+  transform: scale(1.1);
+}
+
+/* Center menu items on large screens */
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Hamburger icon color */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Mobile menu links */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    background: rgba(0,0,0,0.3); /* optional slight transparency */
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}

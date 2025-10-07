@@ -1,0 +1,33 @@
+function StartScreen({ onStart }) {
+  return (
+    <div style={{
+      height: '100vh',          // full viewport height
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: '#f5f5f5',    // light background color
+      textAlign: 'center'
+    }}>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>
+        Welcome to My App!
+      </h1>
+      <button 
+        onClick={onStart} 
+        style={{
+          padding: '12px 25px',
+          fontSize: '1.2rem',
+          borderRadius: '8px',
+          border: 'none',
+          cursor: 'pointer',
+          backgroundColor: '#4CAF50',
+          color: 'white'
+        }}
+      >
+        Yes, Start
+      </button>
+    </div>
+  );
+}
+
+export default StartScreen;
