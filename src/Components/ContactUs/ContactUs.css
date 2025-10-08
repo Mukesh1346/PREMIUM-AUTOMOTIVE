@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  padding:100px 0;
+  padding:200px 0;
 }
 
 .contact-left h2,
@@ -35,14 +35,16 @@
   text-decoration: none;
 }
 
-.btn-send {
+.btnSend {
   background-color:rgb(166, 36, 36);
   color: white;
+  padding:15px 20px;
+  border-radius: 30px;
   border: none;
   transition: all 0.3s ease;
 }
 
-.btn-send:hover {
+.btnSend:hover {
   background-color: #e0435b;
 }
 
@@ -83,4 +85,12 @@
   .address{
     text-align: center;
   }
+}
+
+
+@media (max-width:768px){
+  .contact-container {
+    padding: 30px 0;
+  }
+  
 }

@@ -48,20 +48,29 @@
     }
 
     .MissionSection {
-        height: 100vh;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 40px;
     }
 
     .MissionHeading {
         color: white;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 400;
         text-align: justify;
     }
     .title{
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 700;
         color:white;
         text-align: left;
+    }
+    .subheading {
+     font-size: 20px;
+    }
+    .liText{
+        font-size: 14px;
+        font-weight: 400;
     }
     
 }

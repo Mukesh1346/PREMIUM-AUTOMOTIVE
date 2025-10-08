@@ -21,3 +21,21 @@
     margin-top:10px;
     margin-bottom:30px;
 }
+
+
+
+@media (max-width:768px){
+    .MapImg {
+        width: 100%;
+        height: 300px;
+    }
+
+    .MapContainer {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+
+}
+
+

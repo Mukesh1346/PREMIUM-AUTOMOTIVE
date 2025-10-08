@@ -23,10 +23,21 @@
 .text-stroke {
     font-size: 60px;
     font-weight: bold;
-    background-image: linear-gradient(to bottom, gray, rgb(74, 73, 73)); /* top to bottom */
+    background-image: linear-gradient(to bottom, gray); /* top to bottom */
     -webkit-background-clip: text;   /* Clip gradient to text */
     -webkit-text-fill-color: transparent;  /* Show gradient in text */
     background-clip: text; /* For Firefox */
   }
   
+
+  @media (max-width:768px){
+    .logoImgStart {
+        height: 200px;
+        width: 200px;
+    }
+    .text-stroke {
+        font-size: 25px;
+        margin:10px 0;
+    }
+  }
   

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import map from "../../Assets/Images/map.png"
+import map from "../../Assets/Images/IndiaMap.png"
 import './map.css'
 
 export default function OurNetworks() {

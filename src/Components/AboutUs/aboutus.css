@@ -1,5 +1,6 @@
 .AboutSection{
-    height: 100vh;
+    height: auto;
+    padding:200px 0;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@
 @media (max-width:768px){
     .AboutHeading {
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         text-align: justify;
     }
@@ -36,5 +37,8 @@
         font-weight: 700;
         color:rgb(219, 52, 52);
         text-align: center;
+    }
+    .AboutSection{
+        padding: 25px 0;
     }
 }

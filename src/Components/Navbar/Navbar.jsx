@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
       <div className="container-fluid">
         {/* Logo */}
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand text-center" to="/">
           <img src={logo} alt="Logo" className="logoImg" />
            <p className="logoText">PREMIUM AUTOCARE</p>
         </Link>

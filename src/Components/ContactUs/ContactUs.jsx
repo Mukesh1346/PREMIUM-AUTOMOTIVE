@@ -38,12 +38,12 @@ export default function ContactUs() {
               <p>
                 <strong>Email ID:</strong> Info@sikandstandley.com
               </p>
-              <div className="social-icons mb-3">
+              {/* <div className="social-icons mb-3">
                 <a href="#"><FaFacebookF /></a>
                 <a href="#"><FaTwitter /></a>
                 <a href="#"><FaLinkedinIn /></a>
                 <a href="#"><FaInstagram /></a>
-              </div>
+              </div> */}
               <div className="map-container">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.1497700140003!2d77.07118997496313!3d28.804610376246615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d025798555555%3A0xb11be30bfce4c4e0!2sSikand%20Standley%20Enterprises%20Private%20Limited!5e0!3m2!1sen!2sin!4v1759839978901!5m2!1sen!2sin"
@@ -94,7 +94,7 @@ export default function ContactUs() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-send">Send Message</button>
+                <button type="submit" className=" btnSend">Send Message</button>
               </form>
             </div>
           </div>

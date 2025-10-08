@@ -76,3 +76,14 @@
     background-color: white;
   }
 }
+
+@media (max-width:768px){
+  .logoImg {
+    height: 50px;
+    width: 50px;
+}
+
+.logoText {
+  font-size: 10px;
+}
+}

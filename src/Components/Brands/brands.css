@@ -52,4 +52,14 @@
     font-size: 14px;
     text-align: center;
   }
+
+
+  @media (max-width: 768px){
+    .BrandsSection {
+      height: auto;
+      width: 100vw;
+      padding: 60px 0 ;
+    }
+
+  }
   
