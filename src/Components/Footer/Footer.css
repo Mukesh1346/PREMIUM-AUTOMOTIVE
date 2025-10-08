@@ -135,5 +135,9 @@
         margin:0px;
     }
 
+    .footer-col p{
+      text-align: center;
+    }
+
   }
   

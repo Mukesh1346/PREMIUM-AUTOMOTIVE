@@ -60,10 +60,15 @@
     margin: 0.5rem 0;
   }
 
+  
+
   .navbar{
-    background-color:white;
+    background: black;
   }
   .custom-navbar {
     position: inherit;
+  }
+  .navbar-toggler{
+    background-color: white;
   }
 }
