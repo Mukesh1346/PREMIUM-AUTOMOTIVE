@@ -15,7 +15,7 @@ function StartScreen({ onStart }) {
               </div>
         <div className="buttonSection">
         <AnimatedButton
-            text1="START"
+            text1="GET STARTED"
             text2="Success"
             onClick={ onStart }
           />

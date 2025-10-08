@@ -1,27 +1,35 @@
 import React, { useState } from "react";
+import { sendForm } from "@emailjs/browser";
 import "./ContactUs.css";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+    setStatus("");
+
+    sendForm(
+      "YOUR_SERVICE_ID",    // Replace with your EmailJS Service ID
+      "YOUR_TEMPLATE_ID",   // Replace with your EmailJS Template ID
+      e.target,
+      "YOUR_PUBLIC_KEY"     // Replace with your EmailJS Public Key
+    )
+      .then(() => {
+        setStatus("✅ Message sent successfully!");
+        e.target.reset();
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        setStatus("❌ Failed to send message");
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
-    <div className="contact-container ">
+    <div className="contact-container">
       <div className="container">
         <div className="row">
           {/* Left Side: Company Details */}
@@ -38,12 +46,6 @@ export default function ContactUs() {
               <p>
                 <strong>Email ID:</strong> Info@sikandstandley.com
               </p>
-              {/* <div className="social-icons mb-3">
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaTwitter /></a>
-                <a href="#"><FaLinkedinIn /></a>
-                <a href="#"><FaInstagram /></a>
-              </div> */}
               <div className="map-container">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.1497700140003!2d77.07118997496313!3d28.804610376246615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d025798555555%3A0xb11be30bfce4c4e0!2sSikand%20Standley%20Enterprises%20Private%20Limited!5e0!3m2!1sen!2sin!4v1759839978901!5m2!1sen!2sin"
@@ -63,39 +65,21 @@ export default function ContactUs() {
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label className="form-label">Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
+                  <input type="text" name="name" className="form-control" required />
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
+                  <input type="email" name="email" className="form-control" required />
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Message</label>
-                  <textarea
-                    className="form-control"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="5"
-                    required
-                  ></textarea>
+                  <textarea name="message" className="form-control" rows="5" required></textarea>
                 </div>
-                <button type="submit" className=" btnSend">Send Message</button>
+                <button type="submit" className="btnSend" disabled={loading}>
+                  {loading ? "Sending..." : "Send Message"}
+                </button>
               </form>
+              {status && <p className="status-message mt-3">{status}</p>}
             </div>
           </div>
         </div>

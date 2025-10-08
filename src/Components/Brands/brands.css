@@ -28,7 +28,7 @@
 }
 
 .HighlightText {
-  color: #ff6699;
+  color:rgb(188, 27, 27);
 }
 
 /* UL styling */
@@ -48,7 +48,7 @@
 }
 
 .BrandName:hover {
-  color: #ff6699;
+  color: rgb(184, 28, 28);
   transform: translateX(8px);
 }
 
