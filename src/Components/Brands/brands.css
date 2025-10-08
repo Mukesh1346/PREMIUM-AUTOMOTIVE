@@ -2,18 +2,20 @@
   min-height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-image: url("../../Assets/Images/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .BrandsContent {
   max-width: 800px;
+  margin-left:200px;
+  margin-top:100px;
 }
 
 .BrandsHeading {
@@ -55,6 +57,10 @@
   .BrandsSection {
     min-height: auto;
     padding: 80px 15px;
+  }
+
+  .BrandsContent {
+    margin-left:0px;
   }
 
   .BrandsHeading {

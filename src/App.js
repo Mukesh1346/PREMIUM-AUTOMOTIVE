@@ -41,15 +41,6 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-
-
-
 // import './App.css';
 // import Home from './Pages/Home';
 // import StartScreen from './Components/StartScreen/StartScreen' 
