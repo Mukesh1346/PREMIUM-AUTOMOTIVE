@@ -11,11 +11,22 @@
 }
 
 .HeroHeading{
-    color: white;
+  
+   
+}
+
+.HeroHeading {
     font-size: 55px;
     font-weight: 900;
     text-align: center;
-}
+    font-weight: bold;
+    background-image: linear-gradient(to bottom,rgb(148, 141, 141),  rgb(74, 73, 73),gray ); /* top to bottom */
+    -webkit-background-clip: text;   /* Clip gradient to text */
+    -webkit-text-fill-color: transparent;  /* Show gradient in text */
+    background-clip: text; /* For Firefox */
+  }
+
+
 
 @media (max-width:768px){
     .HeroHeading {

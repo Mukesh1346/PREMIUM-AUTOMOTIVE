@@ -10,8 +10,8 @@
 }
 
 .logoImgStart{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 .StartScreenMainSec{
     text-align: center;
@@ -22,10 +22,11 @@
 
 .text-stroke {
     font-size: 60px;
-  font-weight: bold;
-  background-image: linear-gradient(90deg, rgb(74, 73, 73),gray);
-  -webkit-background-clip: text;   /* Clip the gradient to the text */
-  -webkit-text-fill-color: transparent;  /* Make the text transparent to show gradient */
-  background-clip: text; /* For Firefox (optional, partial support) */
-
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, gray, rgb(74, 73, 73)); /* top to bottom */
+    -webkit-background-clip: text;   /* Clip gradient to text */
+    -webkit-text-fill-color: transparent;  /* Show gradient in text */
+    background-clip: text; /* For Firefox */
   }
+  
+  

@@ -70,7 +70,7 @@ export default App;
 //     const hasStarted = localStorage.getItem('hasStarted');
 //     if (!hasStarted) {
 //       setShowStart(true);
-//     }
+//     } 
 //   }, []);
 
 //   const handleStart = () => {

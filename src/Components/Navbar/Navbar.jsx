@@ -10,6 +10,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="Logo" className="logoImg" />
+           <p className="logoText">PREMIUM AUTOCARE</p>
         </Link>
 
         {/* Hamburger toggle for mobile */}

@@ -7,7 +7,7 @@ export default function Hero() {
       <div className='HeroSection'>
 
         <div className='w-75 text-Section '>
-          <h3 className='HeroHeading'>PREMIUM AUTOMOTIVE CARE
+          <h3 className='HeroHeading '>PREMIUM AUTOMOTIVE CARE
            <br /> SOLUTIONS <br />
             SIKAND STANDLEY
             ENTERPRISES 
