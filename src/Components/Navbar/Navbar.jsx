@@ -40,6 +40,9 @@ export default function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/brands">OEM Partnership </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/our-networks">Our Networks </Link>
+            </li>
           
             <li className="nav-item">
               <Link className="nav-link" to="/contactus">Contact Us</Link>

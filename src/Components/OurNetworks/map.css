@@ -1,0 +1,23 @@
+.MapContainerSec{
+    background-image: url("../../Assets/Images/background2.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MapImg{
+    width: 800px;
+    height: 700px;
+}
+
+.MapContainer{
+    margin-top:150px;
+    margin-bottom:50px;
+}
+
+.NetworkTitle{
+    font-size: 32px;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:30px;
+}

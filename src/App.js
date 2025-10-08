@@ -9,6 +9,7 @@ import AboutUs from './Components/AboutUs/AboutUs';
 import Mission from './Components/Mission/Mission';
 import BrandsUs from './Components/Brands/Brands';
 import ContactUs from './Components/ContactUs/ContactUs';
+import OurNetworks from './Components/OurNetworks/OurNetworks';
 
 function App() {
   const [showStart, setShowStart] = useState(false);
@@ -38,6 +39,7 @@ function App() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/brands" element={<BrandsUs />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/our-networks" element={<OurNetworks />} />
         {/* Add more routes here later if needed */}
       </Routes>
       <Footer/>

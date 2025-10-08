@@ -1,0 +1,22 @@
+.StartScreen{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../Assets/Images/StartScreen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImgStart{
+    height: 400px;
+    width: 400px;
+}
+.StartScreenMainSec{
+    text-align: center;
+}
+.buttonSection{
+    margin-top:25px;
+}
+
