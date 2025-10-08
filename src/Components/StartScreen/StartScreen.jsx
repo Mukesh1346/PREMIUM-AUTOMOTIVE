@@ -10,7 +10,9 @@ function StartScreen({ onStart }) {
           <div className="text-center">
             <img src={logo} alt="logoimage" className="logoImgStart" />
           </div>
-
+              <div>
+                <h3 className="text-stroke">PREMIUM AUTOCARE</h3>
+              </div>
         <div className="buttonSection">
         <AnimatedButton
             text1="START"
