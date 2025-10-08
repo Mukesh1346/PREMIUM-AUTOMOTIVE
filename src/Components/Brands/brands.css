@@ -1,65 +1,71 @@
-/* Your existing CSS stays untouched */
 .BrandsSection {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../Assets/Images/background2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../Assets/Images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.BrandsContent {
+  max-width: 800px;
+}
+
+.BrandsHeading {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.HighlightText {
+  color: #ff6699;
+}
+
+/* UL styling */
+.BrandsList {
+  list-style-type: disc;
+  text-align: left;
+  color: white;
+  padding-left: 40px;
+}
+
+/* LI styling */
+.BrandName {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.BrandName:hover {
+  color: #ff6699;
+  transform: translateX(8px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .BrandsSection {
+    min-height: auto;
+    padding: 80px 15px;
   }
-  
+
   .BrandsHeading {
-    color: white;
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
+    font-size: 22px;
   }
-  
-  /* 👇 Add this new part only */
-  .BrandsImagesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .BrandCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    transition: transform 0.3s ease;
-  }
-  
-  .BrandCard:hover {
-    transform: scale(1.1);
-  }
-  
-  .BrandImage {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-  
+
   .BrandName {
-    margin-top: 10px;
-    color: white;
-    font-size: 14px;
-    text-align: center;
+    font-size: 17px;
   }
 
-
-  @media (max-width: 768px){
-    .BrandsSection {
-      height: auto;
-      width: 100vw;
-      padding: 60px 0 ;
-    }
-
+  .BrandsList {
+    padding-left: 20px;
   }
-  
+}

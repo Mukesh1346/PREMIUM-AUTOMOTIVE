@@ -7,20 +7,17 @@
     background-image: url("../../Assets//Images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-  
+    
 }
 
-.HeroHeading{
-  
-   
-}
+
 
 .HeroHeading {
     font-size: 55px;
     font-weight: 900;
     text-align: center;
     font-weight: bold;
-    background-image: linear-gradient(to bottom,rgb(173, 166, 166) ); /* top to bottom */
+    background-image: linear-gradient(to bottom,rgb(128,128,128) ); /* top to bottom */
     -webkit-background-clip: text;   /* Clip gradient to text */
     -webkit-text-fill-color: transparent;  /* Show gradient in text */
     background-clip: text; /* For Firefox */

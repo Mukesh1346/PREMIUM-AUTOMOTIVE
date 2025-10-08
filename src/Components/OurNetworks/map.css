@@ -1,5 +1,6 @@
 .MapContainerSec{
-    background-image: url("../../Assets/Images/background2.jpg");
+    /* background-image: url("../../Assets/Images/background2.jpg"); */
+    background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
