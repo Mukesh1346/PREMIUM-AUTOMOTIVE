@@ -20,13 +20,18 @@
     margin-top:25px;
 }
 
-.text-stroke {
-    font-size: 60px;
-    font-weight: bold;
-    background-image: linear-gradient(to bottom, rgb(128,128,128)); /* top to bottom */
-    -webkit-background-clip: text;   /* Clip gradient to text */
-    -webkit-text-fill-color: transparent;  /* Show gradient in text */
-    background-clip: text; /* For Firefox */
+
+
+  .text-stroke  {
+    font-size: 64px;
+    font-weight: 700;
+    color: #3a3a3a;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  
+    /* The embossed magic: two light and dark shadows */
+   
+    text-shadow: 5px 2px 0px rgba(184, 180, 180, 0.8);  /* top-left highlight (light) */
   }
   
 

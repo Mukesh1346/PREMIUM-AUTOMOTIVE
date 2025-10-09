@@ -93,7 +93,9 @@
     color: #fff;
     transition: color 0.3s, transform 0.3s;
   }
-  
+  /* .address{
+    color: #ff0000;
+  } */
   .footer-social a:hover {
     color: #ff0000;
     transform: translateY(-3px);

@@ -10,9 +10,9 @@ const Footer = () => {
 
           {/* Company Info */}
           <div className="footer-col footerSec1">
-            <h5 className="footer-title">Sikand Standley Enterprises Private Limited</h5>
+            <h5 className="footer-title">CONTACT DETAILS</h5>
             <p>
-              <strong>Corporate  Address:</strong><br />
+              <strong className="address">Corporate  Address:</strong> Sikand Standley Enterprises Private Limited <br /> <br />
               Plot No.- 33, Pocket - N, DSIIDC, Sector -5,<br />
               Industrial Area, Bawana, New Delhi - 110039
             </p>
@@ -26,9 +26,12 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/aboutus">About Us</Link></li>
-              <li><Link to="/contactus">Contact Us</Link></li>
+              <li><Link to="/our-networks">Mission</Link></li>
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/services">Services</Link></li>
               <li><Link to="/brands">OEM Partnership</Link></li>
               <li><Link to="/our-networks">Our Networks</Link></li>
+              <li><Link to="/contactus">Contact Us</Link></li>
               
             </ul>
           </div>
