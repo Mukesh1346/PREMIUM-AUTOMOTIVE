@@ -1,76 +1,77 @@
-.MissionSection{
-    padding-top:200px;
-    padding-bottom:200px;
-    /* height: 100vh; */
+.MissionSection {
+    padding-top: 200px;
+    padding-bottom: 200px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../../Assets//Images/background2.jpg");
+    background-image: url("../../Assets/Images/background2.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-  
+    background-size: cover; /* desktop: stretch/cover */
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.title{
+.title {
     font-size: 30px;
     font-weight: 700;
-    color:white;
+    color: white;
     text-align: left;
 }
-.liText{
+
+.liText {
     color: white;
     font-size: 25px;
     font-weight: 700;
     text-align: left;
 }
 
-
-.MissionHeading{
+.MissionHeading {
     color: white;
     font-size: 25px;
     font-weight: 700;
     text-align: left;
 }
 
-.subheading{
+.subheading {
     color: white;
     font-size: 30px;
     font-weight: 700;
     text-align: left;
 }
 
-@media (max-width:768px){
-    .MissionHeading {
-        color: white;
-        font-size: 15px;
-        font-weight: 700;
-    }
-
+/* Responsive */
+@media (max-width: 768px) {
     .MissionSection {
         height: auto;
         padding-top: 20px;
         padding-bottom: 40px;
+        background-image: url("../../Assets/Images/background2.jpg");
+        background-repeat: repeat-y; /* ✅ tile vertically */
+        background-size: auto;       /* keep original size */
+        background-position: top center;
     }
 
     .MissionHeading {
-        color: white;
         font-size: 15px;
         font-weight: 400;
         text-align: justify;
     }
-    .title{
+
+    .title {
         font-size: 20px;
         font-weight: 700;
-        color:white;
+        color: white;
         text-align: left;
     }
+
     .subheading {
-     font-size: 20px;
+        font-size: 20px;
     }
-    .liText{
+
+    .liText {
         font-size: 14px;
         font-weight: 400;
     }
-    
 }

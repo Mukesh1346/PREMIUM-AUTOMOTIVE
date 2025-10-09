@@ -304,4 +304,17 @@
       drop-shadow(0 -4px 6px #0009);
     animation: none;
   }
+
+
+  @media (max-width:768px){
+       .btn{
+        width: 200px;
+        width: 100%;
+        padding: 0.9em 2em;
+       }
+
+       .btn-letter{
+        font-size: 12px;
+       }
+  }
   

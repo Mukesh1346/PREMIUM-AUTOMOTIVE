@@ -6,16 +6,20 @@
   align-items: center;
   background-image: url("../../Assets/Images/background2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* desktop: stretch */
   background-position: center;
   padding: 80px 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .ServiceContent {
   max-width: 800px;
-  margin-left:200px;
-  margin-top:100px;
+  margin-left: 200px;
+  margin-top: 100px;
+  position: relative; /* keep content above background pseudo */
+  z-index: 1;
 }
 
 .ServiceHeading {
@@ -30,7 +34,7 @@
 }
 
 .ServiceText {
-  color:white;
+  color: white;
 }
 
 /* UL styling */
@@ -59,15 +63,18 @@
   .ServiceSection {
     min-height: auto;
     padding: 0px 15px;
+    background-image: url("../../Assets/Images/background2.jpg");
+    background-repeat: repeat-y; /* ✅ repeat vertically instead of stretching */
+    background-size: auto;       /* keep original image size */
+    background-position: top center;
   }
 
   .ServiceContent {
     margin-top: 40px;
-    margin-left:0px;
+    margin-left: 0px;
   }
 
   .ServiceHeading {
-  
     text-align: left;
     font-size: 22px;
   }
