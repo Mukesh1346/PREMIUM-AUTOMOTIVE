@@ -3,6 +3,17 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Prevent form from reloading page
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    alert("Subscribed successfully!");
+  };
+
+  // Optional: scroll to top when a footer link is clicked
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="footer">
       <div className="container footer-container">
@@ -10,49 +21,39 @@ const Footer = () => {
 
           {/* Company Info */}
           <div className="footer-col footerSec1">
-            <h5 className="footer-title">CONTACT DETAILS</h5>
+            <h5 className="footer-title">Corporate Address</h5>
             <p>
-              <strong className="address">Corporate  Address:</strong> Sikand Standley Enterprises Private Limited <br /> <br />
-              Plot No.- 33, Pocket - N, DSIIDC, Sector -5,<br />
-              Industrial Area, Bawana, New Delhi - 110039
+               Sikand Standley Enterprises Private Limited <br />
+              Plot No.- 33, Pocket - N, DSIIDC, <br />Sector -5,
+              Industrial Area, Bawana, <br /> New Delhi - 110039
             </p>
             <p><strong>Phone:</strong> 011-47100197 / 98, 7838960232</p>
             <p><strong>Email:</strong> <a href="mailto:Info@sikandstandley.com">Info@sikandstandley.com</a></p>
           </div>
 
           {/* Quick Links */}
-          <div className="footer-col">
+          <div className="footer-col quickLinksCol">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/aboutus">About Us</Link></li>
-              <li><Link to="/our-networks">Mission</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/brands">OEM Partnership</Link></li>
-              <li><Link to="/our-networks">Our Networks</Link></li>
-              <li><Link to="/contactus">Contact Us</Link></li>
-              
+              <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+              <li><Link to="/aboutus" onClick={handleLinkClick}>About Us</Link></li>
+              <li><Link to="/our-networks" onClick={handleLinkClick}>Mission</Link></li>
+              <li><Link to="/products" onClick={handleLinkClick}>Products</Link></li>
+              <li><Link to="/services" onClick={handleLinkClick}>Services</Link></li>
+              <li><Link to="/brands" onClick={handleLinkClick}>OEM Partnership</Link></li>
+              <li><Link to="/our-networks" onClick={handleLinkClick}>Our Networks</Link></li>
+              <li><Link to="/contactus" onClick={handleLinkClick}>Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div className="footer-col">
+          <div className="footer-col NewsLetterSec">
             <h5 className="footer-title">Newsletter</h5>
             <p>Subscribe to our newsletter to get latest updates</p>
-            <form className="newsletter-form">
+            <form className="newsletter-form" onSubmit={handleSubscribe}>
               <input type="email" placeholder="Enter your email" required />
               <button type="submit">Subscribe</button>
             </form>
-
-            {/* Social Media */}
-            {/* <div className="footer-social ">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-youtube"></i></a>
-            </div> */}
           </div>
 
         </div>
@@ -61,7 +62,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          <p>© 2025 Sikand Standley Enterprises Private Limited. All Rights Reserved.</p>
+          <p>©  Sikand Standley Enterprises Private Limited. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

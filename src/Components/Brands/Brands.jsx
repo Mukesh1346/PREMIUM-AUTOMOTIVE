@@ -16,7 +16,7 @@ export default function BrandsUs() {
   return (
     <section className="BrandsSection">
       <div className="BrandsContent text-center">
-        <h2 className="BrandsHeading mb-4">
+        <h2 className="BrandsHeading  mb-4">
           Our Esteemed <span className="HighlightText">OEM Partnerships</span>
         </h2>
 

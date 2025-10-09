@@ -32,7 +32,7 @@ export default function Service() {
     <section className="ServiceSection">
       <div className="ServiceContent text-center">
         <h2 className="ServiceHeading mb-4">
-        Available <span className="ServiceText"> Services </span>
+        <span className="ServiceText"> Services </span>
         </h2>
           
         <ul className="ServiceList">

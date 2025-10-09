@@ -1,6 +1,6 @@
 import React from 'react'
 
-import map from "../../Assets/Images/Map1.png"
+import map from "../../Assets/Images/UpdatedMap.png"
 import './map.css'
 
 export default function OurNetworks() {
@@ -10,7 +10,7 @@ export default function OurNetworks() {
         <div className='MapContainer'>
             {/* <div className='text-light NetworkTitle'>Our Networks</div> */}
             
-      <img src={map} alt="map" className='MapImg' width={500} height={600}/>
+      <img src={map} alt="map" className='MapImg' />
         </div>
     </div>
     </>

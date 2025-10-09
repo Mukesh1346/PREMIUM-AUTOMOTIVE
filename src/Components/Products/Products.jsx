@@ -22,10 +22,10 @@ export default function Product() {
     { id: 17, name: "Head Light Protectactant" },
     { id: 18, name: "Interior Cleaner" },
     { id: 19, name: "Interior Wash" },
-    { id: 20, name: "Multi Purpose Shiner" },
+    { id: 20, name: "Multipurpose Shiner" },
     { id: 21, name: "Multipurpose Cleaner" },
     { id: 22, name: "Odor Nutrilizer" },
-    { id: 23, name: "Professional Microfibre Towel (16x16) (4x1)" },
+    { id: 23, name: "Professional Microfibre Towels" },
     { id: 24, name: "Seat Cover Non Wooven 3 Pcs" },
     { id: 25, name: "Spray n Wipe" },
     { id: 26, name: "Tire Shiner" },
@@ -79,7 +79,7 @@ export default function Product() {
 
         <div>
           <h2 className="ProductHeading mb-4">
-            <span className="ProductText">  Car Care Solution
+            <span className="ProductText">  Car Care 
             </span>
           </h2>
 
@@ -93,7 +93,7 @@ export default function Product() {
         </div>
         <div>
           <h2 className="ProductHeading mb-4">
-            <span className="ProductText"> Technical Products
+            <span className="ProductText"> Technical 
             </span>
           </h2>
 
@@ -107,7 +107,7 @@ export default function Product() {
         </div>
         <div>
           <h2 className="ProductHeading mb-4">
-            <span className="ProductText"> Aerosol Products
+            <span className="ProductText"> Aerosol 
 
             </span>
           </h2>

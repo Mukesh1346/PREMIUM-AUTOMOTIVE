@@ -37,8 +37,8 @@ export default function ContactUs() {
             <div className="contact-left p-4 h-100 address shadow-sm rounded">
               <h2 className="mb-3">CONTACT US</h2>
               <p>
-                <strong>Corporate Address:</strong> Sikand Standley Enterprises Private Limited, <br />
-                Plot No.- 33, Pocket - N, DSIIDC, Sector -5, Industrial Area, Bawana, New Delhi - 110039
+                <strong>Corporate Address:</strong> <br /> Sikand Standley Enterprises Private Limited, <br />
+                Plot No.- 33, Pocket - N, DSIIDC, <br /> Sector -5, Industrial Area, Bawana,  <br />New Delhi - 110039
               </p>
               <p>
                 <strong>Contact Number:</strong> 011-47100197 / 98, 7838960232

@@ -19,6 +19,7 @@
 }
 
 .ServiceHeading {
+  margin-left: 18px !important;
   text-align: left;
   color: #ffffff;
   font-size: 28px;
@@ -66,6 +67,7 @@
   }
 
   .ServiceHeading {
+  
     text-align: left;
     font-size: 22px;
   }

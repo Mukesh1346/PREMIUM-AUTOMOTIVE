@@ -77,9 +77,16 @@
     border-radius: 0 3px 3px 0;
     transition: background-color 0.3s;
   }
-  
+  .quickLinksCol{
+    padding-left:100px ;
+    text-align: left !important;
+  }
+
   .newsletter-form button:hover {
     background-color: #cc0000;
+  }
+  .NewsLetterSec{
+    text-align: left !important;
   }
   
   .footer-social {
@@ -117,6 +124,10 @@
       flex-direction: column;
 
     }
+    .footer-title {
+      text-align: center;
+      margin-top: 10px;
+    }
    .footer{
     text-align: center;
     font-size: 12px;
@@ -137,8 +148,19 @@
         margin:0px;
     }
 
+    .quickLinksCol {
+     padding: 0px;
+    }
+     
+    .footer-links {
+      text-align: center;
+    }
     .footer-col p{
       text-align: center;
+    }
+
+    .footer-title {
+      margin-top: 13px;
     }
 
   }
