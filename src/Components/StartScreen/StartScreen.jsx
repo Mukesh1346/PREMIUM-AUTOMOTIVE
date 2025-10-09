@@ -1,5 +1,5 @@
 import "./startScreen.css"
-import logo from '../../Assets/Images/LOGO1.png'
+import logo from '../../Assets/Images/HomeLogo.png'
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 
 function StartScreen({ onStart }) {
@@ -10,9 +10,9 @@ function StartScreen({ onStart }) {
           <div className="text-center">
             <img src={logo} alt="logoimage" className="logoImgStart" />
           </div>
-              <div>
+              {/* <div>
                 <h3 className="text-stroke">PREMIUM AUTOCARE</h3>
-              </div>
+              </div> */}
         <div className="buttonSection">
         <AnimatedButton text1="GET STARTED" text2="Success" onClick={onStart} />
 
