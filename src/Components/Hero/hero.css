@@ -7,8 +7,22 @@
     background-image: url("../../Assets//Images/background2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 100px;
     
 }
+
+
+.embossed {
+    font-size: 64px;
+    font-weight: 700;
+    color: #3a3a3a;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  
+    /* The embossed magic: two light and dark shadows */
+   
+    text-shadow: 5px 2px 0px rgba(184, 180, 180, 0.8);  /* top-left highlight (light) */
+  }
 
 
 
@@ -38,5 +52,6 @@
 
     .HeroSection {
         height: 40vh;
+        padding: 0px;
     }
 }

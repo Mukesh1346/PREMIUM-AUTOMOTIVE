@@ -14,11 +14,8 @@ function StartScreen({ onStart }) {
                 <h3 className="text-stroke">PREMIUM AUTOCARE</h3>
               </div>
         <div className="buttonSection">
-        <AnimatedButton
-            text1="GET STARTED"
-            text2="Success"
-            onClick={ onStart }
-          />
+        <AnimatedButton text1="GET STARTED" text2="Success" onClick={onStart} />
+
         </div>
         </div>
 

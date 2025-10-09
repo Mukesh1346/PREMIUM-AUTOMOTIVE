@@ -10,6 +10,8 @@ import Mission from './Components/Mission/Mission';
 import BrandsUs from './Components/Brands/Brands';
 import ContactUs from './Components/ContactUs/ContactUs';
 import OurNetworks from './Components/OurNetworks/OurNetworks';
+import Service from './Components/Services/Services';
+import Product from './Components/Products/Products';
 
 function App() {
   const [showStart, setShowStart] = useState(true);
@@ -32,6 +34,8 @@ function App() {
         <Route path="/brands" element={<BrandsUs />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/our-networks" element={<OurNetworks />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/products" element={<Product />} />
       </Routes>
       <Footer />
     </BrowserRouter>

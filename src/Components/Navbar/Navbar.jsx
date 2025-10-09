@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link className="navbar-brand text-center" to="/">
           <img src={logo} alt="Logo" className="logoImg" />
-          <p className="logoText">PREMIUM AUTOCARE</p>
+          <p className="logoText ">PREMIUM AUTOCARE</p>
         </Link>
 
         {/* Hamburger toggle for mobile */}
@@ -50,6 +50,13 @@ export default function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/mission" onClick={handleLinkClick}>Mission</Link>
             </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/products" onClick={handleLinkClick}>Products</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services" onClick={handleLinkClick}>Services</Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/brands" onClick={handleLinkClick}>OEM Partnership</Link>
             </li>
@@ -59,6 +66,7 @@ export default function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/contactus" onClick={handleLinkClick}>Contact Us</Link>
             </li>
+           
           </ul>
         </div>
       </div>

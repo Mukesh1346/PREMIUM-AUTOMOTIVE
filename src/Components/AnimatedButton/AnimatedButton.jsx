@@ -20,15 +20,18 @@ export default function AnimatedButton({ text1 = "Generate", text2 = "Generating
         <div className="txt-wrapper">
           <div className="txt-1">
             {text1.split("").map((letter, index) => (
-              <span key={index} className="btn-letter">
-                {letter}
-              </span>
+              letter === " " ? (
+                <span key={index} className="btn-space"> </span>
+              ) : (
+                <span key={index} className="btn-letter">{letter}</span>
+              )
             ))}
+
           </div>
           <div className="txt-2">
             {text2.split("").map((letter, index) => (
               <span key={index} className="btn-letter">
-                {letter}
+                {letter === " " ? "\u00A0" : letter}
               </span>
             ))}
           </div>

@@ -41,6 +41,12 @@
       border var(--transition),
       background-color var(--transition);
   }
+
+  .btn-space {
+    display: inline-block;
+    width: 0.5em;  /* Adjust space width here */
+  }
+  
   
   .btn::before {
     content: "";
