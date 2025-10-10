@@ -1,127 +1,183 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./product.css";
 
 export default function Product() {
-  const ProductCar = [
-    { id: 1, name: "Alloy Wheel Cleaner" },
-    { id: 2, name: "Antirust Underbody Coating - Black" },
-    { id: 3, name: "Antirust Underbody Coating - Transparent" },
-    { id: 4, name: "Car Care Kit" },
-    { id: 5, name: "Car Polish" },
-    { id: 6, name: "Car Wax Kit" },
-    { id: 7, name: "Ceramic Coating 9 H" },
-    { id: 8, name: "Ceramic Details Spray" },
-    { id: 9, name: "Dashboard Polish" },
-    { id: 10, name: "D'greaser" },
-    { id: 11, name: "Door Edge Guard" },
-    { id: 12, name: "Driwash n Guard" },
-    { id: 13, name: "Glass Cleaner" },
-    { id: 14, name: "Graphene Coating 10 H" },
-    { id: 15, name: "Graphene Details Spray" },
-    { id: 16, name: "Head Light Protection Film (250 Sq Ft)" },
-    { id: 17, name: "Head Light Protectactant" },
-    { id: 18, name: "Interior Cleaner" },
-    { id: 19, name: "Interior Wash" },
-    { id: 20, name: "Multipurpose Shiner" },
-    { id: 21, name: "Multipurpose Cleaner" },
-    { id: 22, name: "Odor Nutrilizer" },
-    { id: 23, name: "Professional Microfibre Towels" },
-    { id: 24, name: "Seat Cover Non Wooven 3 Pcs" },
-    { id: 25, name: "Spray n Wipe" },
-    { id: 26, name: "Tire Shiner" },
-    { id: 27, name: "Wash & Shine Shampoo" },
-    { id: 28, name: "Windshield Washer" },
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "Paint Protection Film",
+      answer: [
+        "Lumishield Paint Protection Film - 5 Years",
+        "Neoshield Paint Protection Film - 8 Years",
+        "Eternashield Paint Protection Film - 10 Years",
+      ],
+    },
+    {
+      question: "Sunroof & Headlight Film",
+      answer: [
+        "Head Light Protection Film (250 Sq Ft)",
+        "Sunroof Film Heat Resistance",
+      ],
+    },
+    {
+      question: "Ceramic Coating",
+      answer: ["Ceramic Coating 9H", "Ceramic Details Spray", "Glass Coating"],
+    },
+    {
+      question: "Graphene Coating",
+      answer: ["Graphene Coating 10H", "Graphene Details Spray"],
+    },
+    {
+      question: "Shampoos & Cleaner Solvents",
+      answer: [
+        "Wash & Shine Shampoo",
+        "D'greaser",
+        "Interior Cleaner",
+        "Interior Wash",
+        "Multipurpose Cleaner",
+        "Spray & Wipe",
+        "Alloy Wheel Cleaner",
+      ],
+    },
+    {
+      question: "Compound, Waxes and Polishes",
+      answer: ["Car Polish", "Wax Polish", "Driwash ‘n’ Guard"],
+    },
+    {
+      question: "Dressing & Glass Treatment",
+      answer: [
+        "Glass Cleaner",
+        "Dashboard Polish",
+        "Multipurpose Shiner",
+        "Tyre Shiner",
+        "Windshield Washer",
+      ],
+    },
+    {
+      question: "Underbody & Internal Panel Protection",
+      answer: [
+        "Antirust Underbody Coating - Black",
+        "Antirust Underbody Coating - Clear",
+        "Cavity Protection Spray",
+      ],
+    },
+    {
+      question: "Odor Elimination",
+      answer: ["Odor Neutralizer"],
+    },
+    {
+      question: "Professional Kit",
+      answer: [
+        "Car Care Kit",
+        "Car Wax Kit",
+        "Head Light Restoration Kit",
+      ],
+    },
+    {
+      question: "Accessories",
+      answer: [
+        "Door Edge Guard",
+        "Professional Microfibre Towel",
+        "Seat Cover - Non Woven (3 Pcs)",
+      ],
+    },
+    {
+      question: "Technical Solutions",
+      answer: [
+        "Clean Plus - For Engines",
+        "Cooling System Flush",
+        "DC-5 - Fuel System Cleaner",
+        "DIC - Diesel Injector Cleaner",
+        "Diesel EISC",
+        "DISC - Diesel Injection System Cleaner",
+        "FR-VII - Premium Oil Treatment",
+        "Fuel System Tune UP",
+        "Gas UP - Fuel Injector Cleaner",
+        "Intake Air System Cleaner",
+        "Fuel Injection Tool - FIT",
+        "Diesel Injection Tool - DIT",
+        "Air Intake Cleaning Tool - 'S' Tool",
+      ],
+    },
+    {
+      question: "Aerosols",
+      answer: [
+        "All Purpose Shiner",
+        "Anti-Rust Underbody Coating - Black",
+        "Battery Terminal Protectant",
+        "Brake Parts Cleaner",
+        "Cabin Disinfectant",
+        "Chain Cleaner",
+        "Chain Lube",
+        "Electrical Contact Cleaner",
+        "Engine Lacquer Coating",
+        "Frigi Foam - AC Vent Cleaner",
+        "Instant Rust Off",
+        "Premium Multipurpose Grease",
+        "Silencer Coating - Black",
+        "Silencer Coating - Zinc",
+        "Silicone Spray",
+        "Throttle Body & Intake Cleaner",
+        "Upholstery Foam Cleaner",
+        "Wheel Drum Paint",
+        "Cavity Protection Spray",
+      ],
+    },
   ];
 
-
-  const TechnicalProducts = [
-    { id: 1, name: "Clean Plus - For Engines" },
-    { id: 2, name: "Cooling System Flush" },
-    { id: 3, name: "DC-5 - Fuel System Cleaner" },
-    { id: 4, name: "DIC - Diesel Injector Cleaner" },
-    { id: 5, name: "Diesel EISC" },
-    { id: 6, name: "DISC - Diesel Injection System Cleaner" },
-    { id: 7, name: "FR-VII - Premium Oil Treatment" },
-    { id: 8, name: "Fuel System Tune UP" },
-    { id: 9, name: "Gas UP - Fuel Injector Cleaner" },
-    { id: 10, name: "Intake Air System Cleaner" },
-  ];
-
-  const AerosolProducts = [
-    { id: 1, name: "All Purpose Shiner" },
-    { id: 2, name: "Anti-Rust Underbody Coating - Black" },
-    { id: 3, name: "Battery Terminal Protectant" },
-    { id: 4, name: "Brake Parts Cleaner" },
-    { id: 5, name: "Cabin Disinfectant" },
-    { id: 6, name: "Chain Cleaner" },
-    { id: 7, name: "Chain Lube" },
-    { id: 8, name: "Electrical Contact Cleaner" },
-    { id: 9, name: "Engine Lacquer Coating" },
-    { id: 10, name: "Frigi Foam - AC Vent Cleaner" },
-    { id: 11, name: "Instant Rust Off" },
-    { id: 12, name: "Premium Multipurpose Grease" },
-    { id: 13, name: "Silencer Coating - Black" },
-    { id: 14, name: "Silencer Coating - Zinc" },
-    { id: 15, name: "Silicone Spray" },
-    { id: 16, name: "Throttle Body & Intake Cleaner" },
-    { id: 17, name: "Upholstery Foam Cleaner" },
-  ];
-  
-
-
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
-   <>
-    <section className="ProductSection">
-      
-      <div className="ProductContent text-center">
-           
+    <>
+      <section className="ProductSection">
+        {/* <div className="overlay"></div> */}
 
-        <div>
-          <h2 className="ProductHeading mb-4">
-            <span className="ProductText">  Car Care 
-            </span>
-          </h2>
+        <div className="ProductContent text-center mt-5">
+          <h1>Product Offering</h1>
 
-          <ul className="ProductList">
-            {ProductCar.map((brand) => (
-              <li key={brand.id} className="ProductBrandName">
-                {brand.name}
-              </li>
-            ))}
-          </ul>
+          <div className="faq-section container mt-5 mb-5">
+            {/* <h2 className="faq-title">Product Offerings</h2> */}
+
+            <div className="faq-container">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className={`faq-item ${activeIndex === index ? "active" : ""}`}
+                >
+                  <button
+                    className="faq-question"
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    {faq.question}
+                    <span className="icon">
+                      {activeIndex === index ? "–" : "+"}
+                    </span>
+                  </button>
+                  <div
+                    className="faq-answer"
+                    style={{
+                      maxHeight: activeIndex === index ? "500px" : "0",
+                      overflow: "hidden",
+                      transition: "max-height 0.5s ease, padding 0.3s ease",
+                      padding: activeIndex === index ? "10px 0" : "0",
+                    }}
+                  >
+                    <ul className="faq-list">
+                      {faq.answer.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div>
-          <h2 className="ProductHeading mb-4">
-            <span className="ProductText"> Technical 
-            </span>
-          </h2>
-
-          <ul className="ProductList">
-            {TechnicalProducts.map((brand) => (
-              <li key={brand.id} className="ProductBrandName">
-                {brand.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="ProductHeading mb-4">
-            <span className="ProductText"> Aerosol 
-
-            </span>
-          </h2>
-
-          <ul className="ProductList">
-            {AerosolProducts.map((brand) => (
-              <li key={brand.id} className="ProductBrandName">
-                {brand.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-   </>
+      </section>
+    </>
   );
 }
