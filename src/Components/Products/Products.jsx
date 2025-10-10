@@ -134,7 +134,7 @@ export default function Product() {
   return (
     <>
       <section className="ProductSection">
-        {/* <div className="overlay"></div> */}
+        <div className="overlay"></div>
 
         <div className="ProductContent text-center mt-5">
           <h1>Product Offering</h1>
