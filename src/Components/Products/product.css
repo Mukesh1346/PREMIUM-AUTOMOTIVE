@@ -8,22 +8,31 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+
+  /* ✅ Background configuration for full viewport */
   background-image: url("../../Assets/Images/background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;        /* No repeating */
+  background-size: cover;              /* Fill entire viewport */
+  background-position: center center;  /* Keep image centered */
+  background-attachment: fixed;        /* Smooth parallax effect */
+
   position: relative;
   overflow: hidden;
   padding: 120px 0;
 }
 
-.ProductSection .overlay {
+/* ✅ Overlay with soft light in center */
+.ProductSection::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* darken overlay for readability */
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.08) 0%,     /* soft center highlight */
+    rgba(0, 0, 0, 0.85) 70%            /* darker edges */
+  );
   z-index: 0;
 }
-
 
 .ProductContent {
   position: relative;
@@ -31,33 +40,32 @@
   width: 100%;
   text-align: center;
   color: white;
-  
 }
 
-
+/* ============================= */
+/* TITLE STYLING */
+/* ============================= */
 .ProductContent h1 {
   letter-spacing: 2px;
-        font-weight: 550;
-        font-stretch: condensed;
-        text-align: center;
-        font-family: sans-serif;
-        background: linear-gradient(145deg, #f6f6f4, #afb3b6, #7f8386);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0px 0px 0 rgba(255, 255, 255, 0.5), 0.4px -1px 0 rgba(0, 0, 0, 1.3), 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 8px rgba(255, 255, 255, 0.1);
-
+  font-weight: 550;
+  font-stretch: condensed;
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(145deg, #f6f6f4, #afb3b6, #7f8386);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0px 0px 0 rgba(255, 255, 255, 0.5),
+    0.4px -1px 0 rgba(0, 0, 0, 1.3),
+    1px 1px 2px rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.1);
   font-size: 64px;
-  /* letter-spacing: 2px; */
-  /* font-weight: 600; */
   text-transform: uppercase;
-  /* color: #fff; */
-  /* text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); */
 }
 
 /* ============================= */
 /* FAQ SECTION */
 /* ============================= */
-
 .faq-section {
   max-width: 900px;
   margin: 50px auto;
@@ -129,7 +137,6 @@
   color: #ff5555;
 }
 
-
 /* ============================= */
 /* MOBILE ADJUSTMENTS */
 /* ============================= */
@@ -144,10 +151,20 @@
   }
 
   .faq-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  .ProductSection{
-    /* padding-top:40px; */
+
+  .ProductSection {
     padding: 40px 10px 40px 10px;
+    background-attachment: scroll; /* Fix flicker issue on mobile */
+  }
+}
+
+/* ============================= */
+/* LARGE SCREEN FIX (OPTIONAL) */
+/* ============================= */
+@media (min-width: 1600px) {
+  .ProductSection {
+    background-size: cover; /* Maintain full coverage on ultrawide */
   }
 }
