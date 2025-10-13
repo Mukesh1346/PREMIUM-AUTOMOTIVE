@@ -50,12 +50,12 @@
     }
 
     .HeroSection {
-        height: 40vh;
+        height: 65vh;
         padding: 0px;
     }
 
     .embossed {
-        font-size: 48px;
+        font-size: 38px;
         letter-spacing: 2px;
         font-weight: 550;
         font-stretch: condensed;

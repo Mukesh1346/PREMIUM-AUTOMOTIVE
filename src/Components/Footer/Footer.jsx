@@ -1,68 +1,88 @@
 import React from "react";
-import "./Footer.css";
 import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
-  // Prevent form from reloading page
   const handleSubscribe = (e) => {
     e.preventDefault();
     alert("Subscribed successfully!");
   };
 
-  // Optional: scroll to top when a footer link is clicked
   const handleLinkClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer mt-auto">
       <div className="container footer-container">
-        <div className="footer-row">
-
-          {/* Company Info */}
-          <div className="footer-col footerSec1">
-            <h5 className="footer-title">Corporate Address</h5>
-            <p>
-               Sikand Standley Enterprises Private Limited <br />
-              Plot No.- 33, Pocket - N, DSIIDC, <br />Sector -5,
-              Industrial Area, Bawana, <br /> New Delhi - 110039
-            </p>
-            <p><strong>Phone:</strong> 011-47100197 / 98, 7838960232</p>
-            <p><strong>Email:</strong> <a href="mailto:Info@sikandstandley.com">Info@sikandstandley.com</a></p>
-          </div>
-
+        <div className="row text-center text-md-start">
           {/* Quick Links */}
-          <div className="footer-col quickLinksCol">
-            <h5 className="footer-title">Quick Links</h5>
+          <div className="col-12 col-md-3 mb-4">
+           <div className=" quickColumn ">
+           <h5 className="footer-title footerSec1">Quick Links</h5>
             <ul className="footer-links">
-              <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/aboutus" onClick={handleLinkClick}>About Us</Link></li>
-              <li><Link to="/our-networks" onClick={handleLinkClick}>Mission</Link></li>
-              <li><Link to="/products" onClick={handleLinkClick}>Products</Link></li>
-              <li><Link to="/services" onClick={handleLinkClick}>Services</Link></li>
-              <li><Link to="/brands" onClick={handleLinkClick}>OEM Partnership</Link></li>
-              <li><Link to="/our-networks" onClick={handleLinkClick}>Our Networks</Link></li>
-              <li><Link to="/contactus" onClick={handleLinkClick}>Contact Us</Link></li>
+              {[
+                { to: "/", text: "Home" },
+                { to: "/aboutus", text: "About Us" },
+                { to: "/Mission", text: "Mission" },
+                { to: "/products", text: "Products" },
+                { to: "/services", text: "Services" },
+                { to: "/brands", text: "OEM Partnership" },
+                { to: "/our-networks", text: "Our Networks" },
+                { to: "/contactus", text: "Contact Us" },
+              ].map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} onClick={handleLinkClick}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
+           </div>
           </div>
 
           {/* Newsletter */}
-          <div className="footer-col NewsLetterSec">
-            <h5 className="footer-title">Newsletter</h5>
-            <p>Subscribe to our newsletter to get latest updates</p>
+          <div className="col-12 col-md-5 mb-4">
+           <div className="NewsLetterColumn">
+           <h5 className="footer-title newstitle">Newsletter</h5>
+            <p>Subscribe to our newsletter to get the latest updates.</p>
             <form className="newsletter-form" onSubmit={handleSubscribe}>
               <input type="email" placeholder="Enter your email" required />
               <button type="submit">Subscribe</button>
             </form>
+           </div>
           </div>
 
+          {/* Corporate Info */}
+          <div className="col-12 col-md-4 mb-4">
+           <div className="AddressColumn">
+           <h5 className="footer-title">Corporate Address</h5>
+            <p>
+              Sikand Standley Enterprises Private Limited <br />
+              Plot No. 33, Pocket N, DSIIDC, <br />
+              Sector 5, Industrial Area, Bawana, <br />
+              New Delhi - 110039
+            </p>
+            <p>
+              <strong>Phone:</strong> 011-47100197 / 98, 7838960232
+            </p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:Info@sikandstandley.com">
+                Info@sikandstandley.com
+              </a>
+            </p> 
+           </div>
+          </div>
         </div>
 
         <hr className="footer-hr" />
 
-        {/* Bottom */}
-        <div className="footer-bottom">
-          <p>©  Sikand Standley Enterprises Private Limited. All Rights Reserved.</p>
+        <div className="footer-bottom text-center">
+          <p>
+            © {new Date().getFullYear()} Sikand Standley Enterprises Private
+            Limited. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
