@@ -16,12 +16,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-row">
-          
-
           {/* Quick Links */}
           <div className="footer-col footer-links-col">
-            <h5 className="footer-title">Quick Links</h5>
-            <ul className="footer-links">
+            <h5 className="footer-title foot12">Quick Links</h5>
+            <ul className="footer-links foot12">
               {[
                 { to: "/", text: "Home" },
                 { to: "/aboutus", text: "About Us" },

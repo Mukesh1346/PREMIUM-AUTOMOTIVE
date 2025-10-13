@@ -75,7 +75,7 @@ export default function Product() {
       answer: [
         "Premium Multipurpose Grease",
         "Silicone Spray",
-        "Battery Protectant",
+        // "Battery Protectant",
         "Battery Terminal Protectant",
       ],
     },
