@@ -69,10 +69,13 @@
 }
 .newsletter-form input {
   flex: 1;
-  padding: 10px 15px;
+  padding: 10px 5px;
   border: none;
   font-size: 0.95rem;
   outline: none;
+}
+.AddressColumn{
+  text-align: center;
 }
 .newstitle{
   text-align: center;

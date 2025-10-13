@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="row text-center text-md-start">
           {/* Quick Links */}
-          <div className="col-12 col-md-3 mb-4">
+          <div className="col-12 col-md-4 mb-4">
            <div className=" quickColumn ">
            <h5 className="footer-title footerSec1">Quick Links</h5>
             <ul className="footer-links">
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="col-12 col-md-5 mb-4">
+          <div className="col-12 col-md-4 mb-4">
            <div className="NewsLetterColumn">
            <h5 className="footer-title newstitle">Newsletter</h5>
             <p>Subscribe to our newsletter to get the latest updates.</p>
