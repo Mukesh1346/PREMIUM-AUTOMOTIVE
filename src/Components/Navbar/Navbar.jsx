@@ -61,7 +61,7 @@ export default function Navbar() {
               <Link className="nav-link" to="/brands" onClick={handleLinkClick}>OEM Partnership</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/our-networks" onClick={handleLinkClick}>Our Networks</Link>
+              <Link className="nav-link" to="/our-networks" onClick={handleLinkClick}>Our Network</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contactus" onClick={handleLinkClick}>Contact Us</Link>

@@ -23,11 +23,11 @@ export default function Product() {
     },
     {
       question: "Ceramic Coating",
-      answer: ["Ceramic Coating 9H", "Ceramic Details Spray", "Glass Coating"],
+      answer: ["Ceramic Coating 9H", "Ceramic Details Spray", "Glass Coating","Ceramic Coating Kit"],
     },
     {
       question: "Graphene Coating",
-      answer: ["Graphene Coating 10H", "Graphene Details Spray"],
+      answer: ["Graphene Coating 10H", "Graphene Details Spray","Graphene Coating Kit"],
     },
     {
       question: "Shampoos & Cleaner Solvents",
@@ -98,7 +98,7 @@ export default function Product() {
         "Intake Air System Cleaner",
         "Fuel Injection Tool - FIT",
         "Diesel Injection Tool - DIT",
-        "Air Intake Cleaning Tool - 'S' Tool",
+        "Air Intake Cleaning Tool",
       ],
     },
     {
@@ -137,7 +137,7 @@ export default function Product() {
         <div className="overlay"></div>
 
         <div className="ProductContent text-center mt-5">
-          <h1>Product Offering</h1>
+          {/* <h1>Product Offering</h1> */}
 
           <div className="faq-section container mt-5 mb-5">
             {/* <h2 className="faq-title">Product Offerings</h2> */}
@@ -159,12 +159,12 @@ export default function Product() {
                   </button>
                   <div
                     className="faq-answer"
-                    style={{
-                      maxHeight: activeIndex === index ? "500px" : "0",
-                      overflow: "hidden",
-                      transition: "max-height 0.5s ease, padding 0.3s ease",
-                      padding: activeIndex === index ? "10px 0" : "0",
-                    }}
+                     style={{
+    maxHeight: activeIndex === index ? "fit-content" : "0",
+    overflow: "hidden",
+    transition: "all 0.5s ease",
+    padding: activeIndex === index ? "10px 0" : "0",
+  }}
                   >
                     <ul className="faq-list">
                       {faq.answer.map((item, i) => (

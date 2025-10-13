@@ -11,6 +11,7 @@ export default function BrandsUs() {
     { id: 6, name: "TATA MOTORS LIMITED" },
     { id: 7, name: "TOYOTA KIRLOSKAR MOTOR" },
     { id: 8, name: "TRIUMPH MOTORCYCLES LTD" },
+    { id: 9, name: "VINFAST AUTO INDIA PRIVATE LIMITED" },
   ];
 
   return (

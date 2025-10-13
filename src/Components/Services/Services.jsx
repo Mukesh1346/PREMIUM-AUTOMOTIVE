@@ -76,6 +76,7 @@ export default function Product() {
         "Premium Multipurpose Grease",
         "Silicone Spray",
         "Battery Protectant",
+        "Battery Terminal Protectant",
       ],
     },
     {
@@ -107,7 +108,7 @@ export default function Product() {
         {/* <div className="overlay"></div> */}
 
         <div className="ProductContent text-center mt-5">
-          <h1>Services Offering</h1>
+          {/* <h1>Services Offering</h1> */}
 
           <div className="faq-section container mt-5 mb-5">
             {/* <h2 className="faq-title">Product Offerings</h2> */}
