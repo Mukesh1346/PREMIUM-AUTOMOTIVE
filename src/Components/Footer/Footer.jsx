@@ -27,7 +27,7 @@ const Footer = () => {
                 { to: "/Mission", text: "Mission" },
                 { to: "/products", text: "Products" },
                 { to: "/services", text: "Services" },
-                { to: "/brands", text: "OEM Partnership" },
+                { to: "/brands", text: "OEM Partnerships" },
                 { to: "/our-networks", text: "Our Networks" },
                 { to: "/contactus", text: "Contact Us" },
               ].map((link) => (
@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="footer-bottom text-center">
           <p>
-            © {new Date().getFullYear()} Sikand Standley Enterprises Private
+            © Sikand Standley Enterprises Private
             Limited. All Rights Reserved.
           </p>
         </div>
