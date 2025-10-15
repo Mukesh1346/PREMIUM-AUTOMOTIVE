@@ -28,7 +28,7 @@ const Footer = () => {
                 { to: "/products", text: "Products" },
                 { to: "/services", text: "Services" },
                 { to: "/brands", text: "OEM Partnerships" },
-                { to: "/our-networks", text: "Our Networks" },
+                { to: "/our-networks", text: "Our Network" },
                 { to: "/contactus", text: "Contact Us" },
               ].map((link) => (
                 <li key={link.to}>
