@@ -1,31 +1,76 @@
 import React, { useState } from "react";
-import { sendForm } from "@emailjs/browser";
 import "./ContactUs.css";
 
+const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 export default function ContactUs() {
-  const [status, setStatus] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+    hp_website: "", // Honeypot field for bot protection
+  });
+  const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus("");
+    setStatus({ type: "", message: "" });
 
-    sendForm(
-      "YOUR_SERVICE_ID",    // Replace with your EmailJS Service ID
-      "YOUR_TEMPLATE_ID",   // Replace with your EmailJS Template ID
-      e.target,
-      "YOUR_PUBLIC_KEY"     // Replace with your EmailJS Public Key
-    )
-      .then(() => {
-        setStatus("✅ Message sent successfully!");
-        e.target.reset();
-      })
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-        setStatus("❌ Failed to send message");
-      })
-      .finally(() => setLoading(false));
+    // Client-side quick validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setStatus({ type: "error", message: "Please fill in all required fields." });
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_BASE}/api/send-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          type: "success",
+          message: data.message || "Message sent successfully!",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          hp_website: "",
+        });
+      } else {
+        setStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again later.",
+        });
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setStatus({
+        type: "error",
+        message: "Network error. Please check your internet connection or server status.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,24 +107,105 @@ export default function ContactUs() {
           <div className="col-lg-7 col-md-6">
             <div className="contact-right p-4 shadow-sm rounded">
               <h2 className="mb-4">Send Us a Message</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label className="form-label">Name</label>
-                  <input type="text" name="name" className="form-control" required />
+              <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot field (hidden from legitimate humans, traps automated spam bots) */}
+                <div style={{ display: "none" }} aria-hidden="true">
+                  <input
+                    type="text"
+                    name="hp_website"
+                    value={formData.hp_website}
+                    onChange={handleChange}
+                    tabIndex="-1"
+                    autoComplete="off"
+                  />
                 </div>
+
                 <div className="mb-3">
-                  <label className="form-label">Email</label>
-                  <input type="email" name="email" className="form-control" required />
+                  <label className="form-label">Full Name *</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="form-control"
+                    maxLength={100}
+                    placeholder="Enter your name"
+                    required
+                  />
                 </div>
+
                 <div className="mb-3">
-                  <label className="form-label">Message</label>
-                  <textarea name="message" className="form-control" rows="5" required></textarea>
+                  <label className="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="form-control"
+                    maxLength={100}
+                    placeholder="name@example.com"
+                    required
+                  />
                 </div>
+
+                <div className="mb-3">
+                  <label className="form-label">Phone Number (Optional)</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="form-control"
+                    maxLength={20}
+                    placeholder="+91 9876543210"
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label">Subject (Optional)</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="form-control"
+                    maxLength={120}
+                    placeholder="Inquiry Subject"
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label">Message *</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="form-control"
+                    rows="5"
+                    maxLength={3000}
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+
                 <button type="submit" className="btnSend" disabled={loading}>
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? "Sending securely..." : "Send Message"}
                 </button>
               </form>
-              {status && <p className="status-message mt-3">{status}</p>}
+
+              {status.message && (
+                <div
+                  className={`status-message mt-3 p-3 rounded text-center ${
+                    status.type === "success"
+                      ? "alert alert-success bg-success text-white"
+                      : "alert alert-danger bg-danger text-white"
+                  }`}
+                  role="alert"
+                >
+                  {status.type === "success" ? "✅ " : "❌ "}
+                  {status.message}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -24,6 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node src/Server.js",
+    "test:security": "node test-server-security.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
